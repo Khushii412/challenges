@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="left-container">
+            <h1 class="main-heading">QR Code, Frontent Skills</h1>
+            <p class="text">Scan the QR code to upskill your coding skills</p>
+        </div>
+
+        <div class="right-container">
+            <div class="box">
+                 <canvas id="qrcode"></canvas>
+                <!-- <img src="logo.jpg" class="qr-image"> -->
+            </div>
+        </div>  
+    </div>
+
+        <style>
+            body{
+                background-color: rgb(194, 223, 194);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .container {
+                background-color: rgba(224, 210, 210, 0.718);
+                display: flex;
+                flex-direction: row;
+                width: 80%;
+                height: 60%;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .left-container {
+               width: 50%;
+               padding: 2rem 1rem;
+                
+            }
+            .main-heading{
+                font-size: 2.4rem;
+                width: 80%;
+                margin: auto;
+                color: rgb(99, 98, 98);
+                margin-bottom: 2rem;
+            }
+            .text{
+                color: grey;
+                font-size: 1.35rem;
+                width: 80%;
+                margin: auto;
+            }
+            .right-container{
+                width: 50%;
+                height: 100%;
+            }
+            .box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem;
+                height: 90%;
+                max-width: 90%;
+                margin: 2rem 1rem;
+                background-color: rgba(211, 124, 177, 0.292);
+            }
+            canvas#qrcode{
+                width: 300px;
+                height: 300px;
+    
+            }
+
+            @media (min-width:1800px) {
+                .container{
+                    width: 50%;
+                }
+            }
+
+            @media (max-width:815px) {
+                .container{
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+                .right-container{
+                    height: 60%;
+                    width: 100%;
+                    margin: 0;
+                }
+                .left-container{
+                    height: 40%;
+                    width: 90%;
+                    justify-items: center;
+                }
+                .main-heading{
+                    font-size: 1.8rem;
+                    width: 90%;
+                    margin: auto;
+                }
+                .text{
+                    margin: auto;
+                    font-size: 1rem;
+                }
+                canvas#qrcode{
+                    width: 00px;
+                }
+                .box{
+                    width: 100%;
+                }
+               
+            }
+        </style>
+
+       
+
+<script>
+  QRCode.toCanvas(document.getElementById('qrcode'), 'https://example.com', {with:200}, function (error) {
+    if (error) console.error(error)
+    console.log('QR Code generated!')
+  })
+</script>
+
+  
+</body>
+</html>
