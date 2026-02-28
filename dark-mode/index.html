@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1ca569495f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="logo.jpg" class="logo">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">PORTFOLIO</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">HIRE ME</a></li>
+
+            </ul>
+            <img src="moon.jpg" width="100px" id="icon">
+        </nav>
+        
+
+        <div class="info">
+            <h1> I'm <span>Mansi</span> Verma</h1>
+            <p>This is my official portfolio website to showcase my all work related to <br>development and UX design</p>
+            <a href="">Download my CV</a>
+        </div>
+
+        <div class="img-box">
+         
+            <img src="lady.jpg" class="main-img">
+        </div>
+
+        <div class="social-links">
+            <a href=""></a>
+        </div>
+    </div>
+
+    <script>
+
+            let icon = document.getElementById("icon");
+            icon.onclick= function()
+            {
+                document.body.classList.toggle("moon");
+            if(document.body.classList.contains("moon"))
+            {
+                icon.src = "sun.jpg"
+            }
+            else{
+                icon.src= "moon.jpg"
+            }
+            }
+            
+    </script>
+</body>
+</html>
