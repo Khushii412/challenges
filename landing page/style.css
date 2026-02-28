@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: url(p7.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: auto;
+    background-size: cover;
+
+}
+form{
+    
+    display:flex;
+    flex-direction: column;
+   
+}
+.glass{
+    min-height: 430px;
+    min-width: 400px;
+    background-color: Linear-gradient(rgb(0, 0, 0), transparent);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1 );
+    border-color: black;
+    border-radius: 30PX;
+    color: white;
+    line-height: 30px;
+}
+.glass label{
+    padding: 3px 10px
+}
+.glass .lbl{
+    border-radius: 50px;
+}
+.glass .btn{
+    cursor: pointer;
+    background: white;
+    color: green;
+    padding: 4px 5px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-color: green;
+}
+.btn:hover{
+    color: white;
+    background: green;
+    font-weight: 600;
+    border-color: white;
+}
